@@ -2,16 +2,34 @@
     "settings": {
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 0,
-        "worldScrollY": 0,
-        "zoom": 100,
-        "startX": 9,
-        "startY": 9,
+        "worldScrollX": 624,
+        "worldScrollY": 144,
+        "zoom": 400,
+        "customColorsWhite": "E8F8E0",
+        "customColorsLight": "B0F088",
+        "customColorsDark": "509878",
+        "customColorsBlack": "202850",
+        "startX": 8,
+        "startY": 6,
         "startDirection": "down",
-        "startSceneId": "",
-        "playerSpriteSheetId": "581d34d0-9591-4e6e-a609-1d94f203b0cd"
+        "startSceneId": "5aaa18c9-f47e-4ff1-b5c3-5286c763cb1a",
+        "playerSpriteSheetId": "d1fcfe8a-3008-477a-a313-0f30f969680a",
+        "startAnimSpeed": "3"
     },
-    "scenes": [],
+    "scenes": [
+        {
+            "name": "Scene 1",
+            "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
+            "width": 20,
+            "height": 18,
+            "collisions": [],
+            "id": "5aaa18c9-f47e-4ff1-b5c3-5286c763cb1a",
+            "x": 162,
+            "y": 35,
+            "actors": [],
+            "triggers": []
+        }
+    ],
     "_version": "1.2.0",
     "author": "John",
     "name": "9 to 5",
@@ -25,7 +43,7 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "placeholder.png",
-            "_v": 1561399228204
+            "_v": 1578421475688
         }
     ],
     "spriteSheets": [
@@ -35,7 +53,7 @@
             "numFrames": 3,
             "type": "actor",
             "filename": "actor.png",
-            "_v": 1561399228204
+            "_v": 1578421475688
         },
         {
             "id": "581d34d0-9591-4e6e-a609-1d94f203b0cd",
@@ -43,7 +61,15 @@
             "numFrames": 6,
             "type": "actor_animated",
             "filename": "actor_animated.png",
-            "_v": 1561399228204
+            "_v": 1578422620084
+        },
+        {
+            "id": "d1fcfe8a-3008-477a-a313-0f30f969680a",
+            "name": "actor_animated2",
+            "numFrames": 6,
+            "type": "actor_animated",
+            "filename": "actor_animated2.png",
+            "_v": 1578423634065
         },
         {
             "id": "daf95270-e30d-423b-9ee7-990ae29f57f6",
@@ -51,7 +77,7 @@
             "numFrames": 1,
             "type": "static",
             "filename": "static.png",
-            "_v": 1561399228204
+            "_v": 1578421475688
         }
     ],
     "music": [
@@ -59,7 +85,8 @@
             "id": "f50428ab-a084-4591-9bba-2ba10fe7b1c6",
             "name": "template",
             "filename": "template.mod",
-            "_v": 1561399228201
+            "_v": 1578421475684
         }
-    ]
+    ],
+    "customEvents": []
 }
