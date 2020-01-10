@@ -815,6 +815,27 @@
                     }
                 },
                 {
+                    "id": "bc0445d5-1e75-45ab-b7c3-a67a3bb5f3c6",
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "Use Alt, z, or j\nfor \"A\" button."
+                        ],
+                        "avatarId": ""
+                    }
+                },
+                {
+                    "id": "69136cdc-425a-4729-b7cf-7c9175966daa",
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "Use Ctrl, x, or k\nfor \"B\" button."
+                        ],
+                        "avatarId": ""
+                    },
+                    "__type": "event"
+                },
+                {
                     "id": "38ec8587-b9f1-4623-bf5d-df4426a8051f",
                     "command": "EVENT_END"
                 }
