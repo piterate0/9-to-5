@@ -2,30 +2,78 @@
     "settings": {
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 781,
-        "worldScrollY": 101,
-        "zoom": 400,
+        "worldScrollX": 0,
+        "worldScrollY": 0,
+        "zoom": 100,
         "customColorsWhite": "E8F8E0",
         "customColorsLight": "B0F088",
         "customColorsDark": "509878",
         "customColorsBlack": "202850",
-        "startX": 8,
-        "startY": 6,
+        "startX": 2,
+        "startY": 2,
         "startDirection": "down",
-        "startSceneId": "5aaa18c9-f47e-4ff1-b5c3-5286c763cb1a",
+        "startSceneId": "ccf151a3-0191-4072-b2aa-0394cf6cb6d6",
         "playerSpriteSheetId": "d1fcfe8a-3008-477a-a313-0f30f969680a",
-        "startAnimSpeed": "3"
+        "startAnimSpeed": "3",
+        "gbcFastCPUEnabled": false,
+        "customColorsEnabled": true
     },
     "scenes": [
         {
-            "name": "Scene 1",
+            "name": "Battle Test 1",
             "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
             "width": 20,
             "height": 18,
-            "collisions": [],
+            "collisions": [
+                255,
+                255,
+                31,
+                0,
+                128,
+                1,
+                0,
+                24,
+                0,
+                128,
+                1,
+                0,
+                24,
+                0,
+                128,
+                1,
+                0,
+                24,
+                0,
+                0,
+                1,
+                0,
+                16,
+                0,
+                0,
+                1,
+                0,
+                16,
+                0,
+                128,
+                1,
+                0,
+                24,
+                0,
+                128,
+                1,
+                0,
+                24,
+                0,
+                128,
+                1,
+                0,
+                248,
+                255,
+                255
+            ],
             "id": "5aaa18c9-f47e-4ff1-b5c3-5286c763cb1a",
-            "x": 161.75,
-            "y": 35.25,
+            "x": 420.5,
+            "y": 270.25,
             "actors": [
                 {
                     "spriteSheetId": "daf95270-e30d-423b-9ee7-990ae29f57f6",
@@ -614,7 +662,7 @@
                                                     "command": "EVENT_TEXT",
                                                     "args": {
                                                         "text": [
-                                                            "You chose Item."
+                                                            "You chose Item.\nYou don't have any\nitems."
                                                         ],
                                                         "avatarId": ""
                                                     }
@@ -780,42 +828,1178 @@
                     ]
                 }
             ],
+            "triggers": [
+                {
+                    "trigger": "walk",
+                    "id": "b66fa27f-4a07-4c09-9aeb-79297c44634f",
+                    "x": 19,
+                    "y": 7,
+                    "width": 1,
+                    "height": 4,
+                    "script": [
+                        {
+                            "id": "bf2872c4-9188-40a8-b220-85a8b0c405a9",
+                            "command": "EVENT_SWITCH_SCENE",
+                            "args": {
+                                "sceneId": "bfadb7c6-6c55-4bb9-8d68-4489a4a902a6",
+                                "x": 1,
+                                "y": 7,
+                                "direction": "right",
+                                "fadeSpeed": "2"
+                            }
+                        },
+                        {
+                            "id": "3827406d-34e5-4cf7-a076-d914621ef938",
+                            "command": "EVENT_END"
+                        }
+                    ]
+                }
+            ],
+            "script": [
+                {
+                    "id": "508b409f-9b59-4b54-b5d9-03d32b1d68b1",
+                    "command": "EVENT_END"
+                }
+            ]
+        },
+        {
+            "name": "Battle Test 2",
+            "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
+            "width": 20,
+            "height": 18,
+            "collisions": [
+                255,
+                255,
+                31,
+                0,
+                128,
+                1,
+                0,
+                24,
+                0,
+                128,
+                1,
+                0,
+                24,
+                0,
+                128,
+                0,
+                0,
+                8,
+                0,
+                128,
+                0,
+                0,
+                8,
+                0,
+                128,
+                1,
+                0,
+                24,
+                0,
+                128,
+                1,
+                0,
+                24,
+                0,
+                128,
+                1,
+                0,
+                24,
+                0,
+                128,
+                1,
+                0,
+                248,
+                255,
+                255
+            ],
+            "id": "bfadb7c6-6c55-4bb9-8d68-4489a4a902a6",
+            "x": 615.75,
+            "y": 271,
+            "actors": [
+                {
+                    "spriteSheetId": "11b5452b-187c-43a3-afb1-a1f4f74ffda2",
+                    "movementType": "static",
+                    "direction": "down",
+                    "moveSpeed": "1",
+                    "animSpeed": "3",
+                    "id": "c6726a9e-661a-4b72-8165-e43c15303988",
+                    "x": 13,
+                    "y": 8,
+                    "frame": 1,
+                    "script": [
+                        {
+                            "id": "0692a433-e6ee-4c0a-b686-e77dbdfc3d5e",
+                            "command": "EVENT_LOOP",
+                            "args": {
+                                "__collapse": false,
+                                "__label": "Fight Loop"
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "id": "502c1590-ad06-467f-86ad-0759a772f2d2",
+                                        "command": "EVENT_SWITCH",
+                                        "args": {
+                                            "variable": "L3",
+                                            "choices": 2,
+                                            "__collapseCase0": false,
+                                            "value0": 0,
+                                            "__collapseCase1": false,
+                                            "value1": 1,
+                                            "__collapseCase2": false,
+                                            "value2": 3,
+                                            "__collapseCase3": false,
+                                            "value3": 4,
+                                            "__collapseCase4": false,
+                                            "value4": 5,
+                                            "__collapseCase5": false,
+                                            "value5": 6,
+                                            "__collapseCase6": false,
+                                            "value6": 7,
+                                            "__collapseCase7": false,
+                                            "value7": 8,
+                                            "__collapseCase8": false,
+                                            "value8": 9,
+                                            "__collapseCase9": false,
+                                            "value9": 10,
+                                            "__collapseCase10": false,
+                                            "value10": 11,
+                                            "__collapseCase11": false,
+                                            "value11": 12,
+                                            "__collapseCase12": false,
+                                            "value12": 13,
+                                            "__collapseCase13": false,
+                                            "value13": 14,
+                                            "__collapseCase14": false,
+                                            "value14": 15,
+                                            "__collapseCase15": false,
+                                            "value15": 16,
+                                            "__collapseElse": false
+                                        },
+                                        "children": {
+                                            "true0": [
+                                                {
+                                                    "id": "448c726e-8e67-459e-9b54-680b76bbc339",
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            "Karen wants to\nspeak with your\nmanager."
+                                                        ],
+                                                        "avatarId": "daf95270-e30d-423b-9ee7-990ae29f57f6",
+                                                        "__collapse": false
+                                                    }
+                                                },
+                                                {
+                                                    "id": "87e33128-40cc-4255-a8e5-39f8066e6e11",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "true1": [
+                                                {
+                                                    "id": "f32e247d-7a36-4c01-8573-c73719c7cc94",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "true2": [
+                                                {
+                                                    "id": "e6fc8145-81d5-49ec-9699-8a92a408fc8f",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "true3": [
+                                                {
+                                                    "id": "4e7c960b-52e8-4c7a-aaf3-e78adb4aaefc",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "true4": [
+                                                {
+                                                    "id": "4cee7901-c127-4529-923e-31ef3f224ad9",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "true5": [
+                                                {
+                                                    "id": "f25a4b4a-ee54-4179-b698-60f88daa9a4d",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "true6": [
+                                                {
+                                                    "id": "580f382d-4552-4f33-924e-8e82ca12047c",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "true7": [
+                                                {
+                                                    "id": "85f45e9b-85b6-454d-81cb-fce5439040aa",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "true8": [
+                                                {
+                                                    "id": "338deade-660e-4e83-aa88-7d4ad30b946e",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "true9": [
+                                                {
+                                                    "id": "a534f19d-ccf0-4c95-8edf-67f4dea88021",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "true10": [
+                                                {
+                                                    "id": "dc136614-4263-4e26-935a-c1b0240a593d",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "true11": [
+                                                {
+                                                    "id": "93679f09-5919-46c0-98be-ef2979914e20",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "true12": [
+                                                {
+                                                    "id": "127d388a-041b-4123-8af8-145487521a7d",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "true13": [
+                                                {
+                                                    "id": "5232b4fc-8f2e-4653-82fd-22c2141d70f3",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "true14": [
+                                                {
+                                                    "id": "d8fe7d2f-a87c-45aa-b39c-8909ae9a3b74",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "true15": [
+                                                {
+                                                    "id": "0a30ac23-3a7a-457d-9679-562cf030a9c0",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "false": [
+                                                {
+                                                    "id": "94012df2-01a1-4705-8551-2a96c4ddb63c",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "id": "c67a52c5-08e0-4543-9c76-39832b0b8eee",
+                                        "command": "EVENT_MENU",
+                                        "args": {
+                                            "variable": "10",
+                                            "items": 4,
+                                            "option1": "Attack",
+                                            "option2": "Defend",
+                                            "option3": "Item",
+                                            "option4": "Run",
+                                            "option5": "",
+                                            "option6": "",
+                                            "option7": "",
+                                            "option8": "",
+                                            "cancelOnB": true,
+                                            "layout": "menu",
+                                            "cancelOnLastOption": true,
+                                            "__label": "Fight Menu",
+                                            "__collapse": true
+                                        }
+                                    },
+                                    {
+                                        "id": "cfff9ee5-d42c-4409-ac6f-133bf9b19574",
+                                        "command": "EVENT_SWITCH",
+                                        "args": {
+                                            "variable": "10",
+                                            "choices": 3,
+                                            "__collapseCase0": false,
+                                            "value0": 1,
+                                            "__collapseCase1": false,
+                                            "value1": 2,
+                                            "__collapseCase2": false,
+                                            "value2": 3,
+                                            "__collapseCase3": false,
+                                            "value3": 0,
+                                            "__collapseCase4": false,
+                                            "value4": 5,
+                                            "__collapseCase5": false,
+                                            "value5": 6,
+                                            "__collapseCase6": false,
+                                            "value6": 7,
+                                            "__collapseCase7": false,
+                                            "value7": 8,
+                                            "__collapseCase8": false,
+                                            "value8": 9,
+                                            "__collapseCase9": false,
+                                            "value9": 10,
+                                            "__collapseCase10": false,
+                                            "value10": 11,
+                                            "__collapseCase11": false,
+                                            "value11": 12,
+                                            "__collapseCase12": false,
+                                            "value12": 13,
+                                            "__collapseCase13": false,
+                                            "value13": 14,
+                                            "__collapseCase14": false,
+                                            "value14": 15,
+                                            "__collapseCase15": false,
+                                            "value15": 16,
+                                            "__collapseElse": false
+                                        },
+                                        "children": {
+                                            "true0": [
+                                                {
+                                                    "id": "60e2b158-9523-4c96-8cd0-2e84c91fb810",
+                                                    "command": "EVENT_COMMENT",
+                                                    "args": {
+                                                        "text": "Attack",
+                                                        "__collapse": true
+                                                    }
+                                                },
+                                                {
+                                                    "id": "37caaaae-f814-4228-8f34-b28d62efe763",
+                                                    "command": "EVENT_VARIABLE_MATH",
+                                                    "args": {
+                                                        "vectorX": "L1",
+                                                        "operation": "sub",
+                                                        "other": "var",
+                                                        "vectorY": "2",
+                                                        "value": "1",
+                                                        "minValue": "0",
+                                                        "maxValue": "255",
+                                                        "__label": "Enemy Hit by Player",
+                                                        "__collapse": true
+                                                    }
+                                                },
+                                                {
+                                                    "id": "90a2683c-c447-4c70-a826-f66aafb78440",
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            "You hit the Enemy\nfor $02$ damage."
+                                                        ],
+                                                        "avatarId": "",
+                                                        "__collapse": true
+                                                    }
+                                                },
+                                                {
+                                                    "id": "de854174-07e4-49fb-9586-f0fdc40faefe",
+                                                    "command": "EVENT_IF_VALUE_COMPARE",
+                                                    "args": {
+                                                        "vectorX": "L1",
+                                                        "operator": ">",
+                                                        "vectorY": "L0",
+                                                        "__collapseElse": false,
+                                                        "__disableElse": true,
+                                                        "__collapse": true,
+                                                        "__label": "Make negatives Zero"
+                                                    },
+                                                    "children": {
+                                                        "true": [
+                                                            {
+                                                                "id": "27f1add4-146f-4d6f-9bf0-de719a24ee0c",
+                                                                "command": "EVENT_SET_FALSE",
+                                                                "args": {
+                                                                    "variable": "L1",
+                                                                    "__collapse": true,
+                                                                    "__label": "Dead!"
+                                                                }
+                                                            },
+                                                            {
+                                                                "id": "16004795-ad1d-41b0-b9b3-2b0bafa77d09",
+                                                                "command": "EVENT_END"
+                                                            }
+                                                        ],
+                                                        "false": [
+                                                            {
+                                                                "id": "756348f8-74ed-49e9-a610-213b72b8c65c",
+                                                                "command": "EVENT_END"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "__type": "event"
+                                                },
+                                                {
+                                                    "id": "2fd414b2-a5d3-4f3f-95f0-c8e06c925787",
+                                                    "command": "EVENT_IF_FALSE",
+                                                    "args": {
+                                                        "variable": "L1",
+                                                        "__collapseElse": false,
+                                                        "__label": "Enemy Dead?",
+                                                        "__collapse": true,
+                                                        "__disableElse": true
+                                                    },
+                                                    "children": {
+                                                        "true": [
+                                                            {
+                                                                "id": "0b26525e-7f28-41b1-989c-749c68ad8725",
+                                                                "command": "EVENT_COMMENT",
+                                                                "args": {
+                                                                    "text": "If the actor has hp=0, exit the fight loop",
+                                                                    "__collapse": true
+                                                                }
+                                                            },
+                                                            {
+                                                                "id": "3f5c7c72-8779-4d2d-8fc9-b099e8782f32",
+                                                                "command": "EVENT_TEXT",
+                                                                "args": {
+                                                                    "text": [
+                                                                        "Karen has died."
+                                                                    ],
+                                                                    "avatarId": "",
+                                                                    "__collapse": true
+                                                                }
+                                                            },
+                                                            {
+                                                                "id": "6f791056-5022-430a-abe9-17252ba49573",
+                                                                "command": "EVENT_SET_TRUE",
+                                                                "args": {
+                                                                    "variable": "51",
+                                                                    "__collapse": true
+                                                                }
+                                                            },
+                                                            {
+                                                                "id": "e9671558-f5e3-4a34-89a3-c541a77c1d68",
+                                                                "command": "EVENT_ACTOR_HIDE",
+                                                                "args": {
+                                                                    "actorId": "c6726a9e-661a-4b72-8165-e43c15303988",
+                                                                    "__collapse": true
+                                                                }
+                                                            },
+                                                            {
+                                                                "id": "46452f63-b37f-4bc4-8207-97d44551da83",
+                                                                "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+                                                                "args": {
+                                                                    "actorId": "a0781103-6bc5-4995-b35f-b4cbd5c74168",
+                                                                    "__collapse": true
+                                                                }
+                                                            },
+                                                            {
+                                                                "id": "aea3a414-33e2-4a9f-ac0b-2e1e7257b6c5",
+                                                                "command": "EVENT_GOTO_LABEL",
+                                                                "args": {
+                                                                    "label": "FIGHT END",
+                                                                    "__collapse": true,
+                                                                    "__label": "Goto FIGHT END"
+                                                                }
+                                                            },
+                                                            {
+                                                                "id": "233852ae-548b-44db-888d-8d7be172d402",
+                                                                "command": "EVENT_END"
+                                                            }
+                                                        ],
+                                                        "false": [
+                                                            {
+                                                                "id": "19f7731d-f4b7-4cd6-90dc-2783a8477daa",
+                                                                "command": "EVENT_END"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "id": "06093da6-1c6e-496d-b1b5-3a9a27f9cc90",
+                                                    "command": "EVENT_VARIABLE_MATH",
+                                                    "args": {
+                                                        "vectorX": "1",
+                                                        "operation": "sub",
+                                                        "other": "var",
+                                                        "vectorY": "L2",
+                                                        "value": "1",
+                                                        "minValue": "0",
+                                                        "maxValue": "255",
+                                                        "__label": "Player hit by Enemy",
+                                                        "__collapse": true
+                                                    }
+                                                },
+                                                {
+                                                    "id": "da37ac7e-13d1-4ac8-9108-13e28bdb92c4",
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            "Enemy hit you\nfor $L2$ damage."
+                                                        ],
+                                                        "avatarId": "",
+                                                        "__collapse": true,
+                                                        "__label": "Display Damage"
+                                                    }
+                                                },
+                                                {
+                                                    "id": "b2690fd1-c4d1-4968-9e07-9cb7911494c0",
+                                                    "command": "EVENT_IF_VALUE_COMPARE",
+                                                    "args": {
+                                                        "vectorX": "1",
+                                                        "operator": ">",
+                                                        "vectorY": "0",
+                                                        "__collapseElse": false,
+                                                        "__disableElse": true,
+                                                        "__collapse": true,
+                                                        "__label": "Make negatives Zero"
+                                                    },
+                                                    "children": {
+                                                        "true": [
+                                                            {
+                                                                "id": "0bcf8b5b-8a00-4f10-8a11-1c9cffda7a21",
+                                                                "command": "EVENT_SET_FALSE",
+                                                                "args": {
+                                                                    "variable": "1",
+                                                                    "__collapse": true,
+                                                                    "__label": "Dead!"
+                                                                }
+                                                            },
+                                                            {
+                                                                "id": "fe6e7521-9eef-4f91-aefb-2fdd54ff47b7",
+                                                                "command": "EVENT_END"
+                                                            }
+                                                        ],
+                                                        "false": [
+                                                            {
+                                                                "id": "adb7bf28-540f-4b55-b3e6-c74ed926520e",
+                                                                "command": "EVENT_END"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "id": "0fe9c169-9516-41ad-a136-5d1d759554aa",
+                                                    "command": "EVENT_IF_FALSE",
+                                                    "args": {
+                                                        "variable": "1",
+                                                        "__collapseElse": false,
+                                                        "__label": "Player Dead?",
+                                                        "__disableElse": true,
+                                                        "__collapse": true
+                                                    },
+                                                    "children": {
+                                                        "true": [
+                                                            {
+                                                                "id": "28d767a7-f103-4882-af6c-ffc8a27e93d0",
+                                                                "command": "EVENT_TEXT",
+                                                                "args": {
+                                                                    "text": [
+                                                                        "You died!\n"
+                                                                    ],
+                                                                    "avatarId": "",
+                                                                    "__collapse": true,
+                                                                    "__label": "You died!"
+                                                                }
+                                                            },
+                                                            {
+                                                                "id": "d7f36402-d388-4d19-ab0a-a939f457551e",
+                                                                "command": "EVENT_GOTO_LABEL",
+                                                                "args": {
+                                                                    "label": "FIGHT END",
+                                                                    "__collapse": true,
+                                                                    "__label": "Goto FIGHT END"
+                                                                }
+                                                            },
+                                                            {
+                                                                "id": "bc9f4b67-dce8-409e-9080-eed5d7a8b975",
+                                                                "command": "EVENT_END"
+                                                            }
+                                                        ],
+                                                        "false": [
+                                                            {
+                                                                "id": "c118ff0b-90ae-42cf-8986-6dfcdb11cba6",
+                                                                "command": "EVENT_END"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "id": "1448f1b8-b468-4f1c-8c5b-7c793f023331",
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            "You have $01$ HP."
+                                                        ],
+                                                        "avatarId": "",
+                                                        "__collapse": true,
+                                                        "__label": "Display HP"
+                                                    }
+                                                },
+                                                {
+                                                    "id": "283edf2d-0b85-417e-9ca3-2ae19a709c06",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "true1": [
+                                                {
+                                                    "id": "7f116ef0-3871-4417-9819-72f5b10f6a48",
+                                                    "command": "EVENT_COMMENT",
+                                                    "args": {
+                                                        "text": "Defend",
+                                                        "__collapse": true
+                                                    }
+                                                },
+                                                {
+                                                    "id": "3a556893-2c7f-4731-a0ec-ab78976b5639",
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            "You chose Defend."
+                                                        ],
+                                                        "avatarId": "",
+                                                        "__collapse": true
+                                                    }
+                                                },
+                                                {
+                                                    "id": "64ad00cf-0e7d-4c15-80e1-ad456b0c792f",
+                                                    "command": "EVENT_IF_VALUE_COMPARE",
+                                                    "args": {
+                                                        "vectorX": "3",
+                                                        "operator": ">=",
+                                                        "vectorY": "L2",
+                                                        "__collapseElse": false,
+                                                        "__collapse": true
+                                                    },
+                                                    "children": {
+                                                        "true": [
+                                                            {
+                                                                "id": "ccd0ac36-66be-468d-b45b-10dd57f6edb3",
+                                                                "command": "EVENT_SET_VALUE",
+                                                                "args": {
+                                                                    "variable": "4",
+                                                                    "value": "0",
+                                                                    "__collapse": true
+                                                                }
+                                                            },
+                                                            {
+                                                                "id": "220fc181-cb3f-4e31-9bf3-5d7c1024bb09",
+                                                                "command": "EVENT_END"
+                                                            }
+                                                        ],
+                                                        "false": [
+                                                            {
+                                                                "id": "1f4ef289-f3bb-4f28-ab06-be7cf8012f55",
+                                                                "command": "EVENT_VARIABLE_MATH",
+                                                                "args": {
+                                                                    "vectorX": "4",
+                                                                    "operation": "set",
+                                                                    "other": "var",
+                                                                    "vectorY": "L2",
+                                                                    "value": "1",
+                                                                    "minValue": "0",
+                                                                    "maxValue": "255",
+                                                                    "__collapse": true
+                                                                }
+                                                            },
+                                                            {
+                                                                "id": "6c1e0d7c-671e-4dbb-9908-443dd501b5b2",
+                                                                "command": "EVENT_VARIABLE_MATH",
+                                                                "args": {
+                                                                    "vectorX": "4",
+                                                                    "operation": "sub",
+                                                                    "other": "var",
+                                                                    "vectorY": "3",
+                                                                    "value": "1",
+                                                                    "minValue": "0",
+                                                                    "maxValue": "255",
+                                                                    "__collapse": true
+                                                                }
+                                                            },
+                                                            {
+                                                                "id": "80e0f9e2-cfb5-4782-a8f8-6958c8d38e15",
+                                                                "command": "EVENT_END"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "id": "ce1ce62e-6f8d-4dc8-902d-777b2dd77849",
+                                                    "command": "EVENT_VARIABLE_MATH",
+                                                    "args": {
+                                                        "vectorX": "1",
+                                                        "operation": "sub",
+                                                        "other": "var",
+                                                        "vectorY": "4",
+                                                        "value": "1",
+                                                        "minValue": "0",
+                                                        "maxValue": "255",
+                                                        "__label": "Player hit by Enemy",
+                                                        "__collapse": true
+                                                    },
+                                                    "__type": "event"
+                                                },
+                                                {
+                                                    "id": "fa864821-7edf-41de-ac5f-dd55b701aa55",
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            "Enemy hit you\nfor $04$ damage."
+                                                        ],
+                                                        "avatarId": "",
+                                                        "__collapse": true,
+                                                        "__label": "Display Damage"
+                                                    },
+                                                    "__type": "event"
+                                                },
+                                                {
+                                                    "id": "ece3d5b8-2842-4295-8041-802814d2eda0",
+                                                    "command": "EVENT_IF_VALUE_COMPARE",
+                                                    "args": {
+                                                        "vectorX": "1",
+                                                        "operator": ">",
+                                                        "vectorY": "0",
+                                                        "__collapseElse": false,
+                                                        "__disableElse": true,
+                                                        "__collapse": true,
+                                                        "__label": "Make negatives Zero"
+                                                    },
+                                                    "children": {
+                                                        "true": [
+                                                            {
+                                                                "id": "41ea3ed9-c84f-4635-97e2-ec0eb226c220",
+                                                                "command": "EVENT_SET_FALSE",
+                                                                "args": {
+                                                                    "variable": "1",
+                                                                    "__collapse": true,
+                                                                    "__label": "Dead!"
+                                                                }
+                                                            },
+                                                            {
+                                                                "id": "df16ce96-4757-4dcd-a4f0-315c4d674295",
+                                                                "command": "EVENT_END"
+                                                            }
+                                                        ],
+                                                        "false": [
+                                                            {
+                                                                "id": "f1692b81-54c6-4b49-95b2-01f74ad7799f",
+                                                                "command": "EVENT_END"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "__type": "event"
+                                                },
+                                                {
+                                                    "id": "7344bd28-703d-4d71-9a1a-203be58b3c1c",
+                                                    "command": "EVENT_IF_FALSE",
+                                                    "args": {
+                                                        "variable": "1",
+                                                        "__collapseElse": false,
+                                                        "__label": "Player Dead?",
+                                                        "__disableElse": true,
+                                                        "__collapse": true
+                                                    },
+                                                    "children": {
+                                                        "true": [
+                                                            {
+                                                                "id": "0ae9b603-7879-41d4-8194-6cec626a3f25",
+                                                                "command": "EVENT_TEXT",
+                                                                "args": {
+                                                                    "text": [
+                                                                        "You died!\n"
+                                                                    ],
+                                                                    "avatarId": "",
+                                                                    "__collapse": true,
+                                                                    "__label": "You died!"
+                                                                }
+                                                            },
+                                                            {
+                                                                "id": "d0801f88-5914-4d93-b03a-3214704a0bd4",
+                                                                "command": "EVENT_GOTO_LABEL",
+                                                                "args": {
+                                                                    "label": "FIGHT END",
+                                                                    "__collapse": true,
+                                                                    "__label": "Goto FIGHT END"
+                                                                }
+                                                            },
+                                                            {
+                                                                "id": "fb6a3fef-dfe8-4e41-8bc3-f6b59b77a0f0",
+                                                                "command": "EVENT_END"
+                                                            }
+                                                        ],
+                                                        "false": [
+                                                            {
+                                                                "id": "cca460bd-4442-4070-a47f-2771fb903c3b",
+                                                                "command": "EVENT_END"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "__type": "event"
+                                                },
+                                                {
+                                                    "id": "1331a4c3-47f6-409c-9dad-ed7e2b2814e5",
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            "You have $01$ HP."
+                                                        ],
+                                                        "avatarId": "",
+                                                        "__collapse": true,
+                                                        "__label": "Display HP"
+                                                    },
+                                                    "__type": "event"
+                                                },
+                                                {
+                                                    "id": "866b1feb-d808-4e3d-a245-2a2ef49b9c7d",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "true2": [
+                                                {
+                                                    "id": "386eb12a-019c-44c8-8f9e-f2d49b8a279d",
+                                                    "command": "EVENT_COMMENT",
+                                                    "args": {
+                                                        "text": "Item",
+                                                        "__collapse": true
+                                                    }
+                                                },
+                                                {
+                                                    "id": "189ac63b-4f01-41df-8fbc-005edd956969",
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            "You chose Item.\nYou don't have any\nitems."
+                                                        ],
+                                                        "avatarId": "",
+                                                        "__collapse": true
+                                                    }
+                                                },
+                                                {
+                                                    "id": "102a5554-0811-4af8-bcaa-80176179c299",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "true3": [
+                                                {
+                                                    "id": "6fe2a8b6-4dd2-4ab0-9243-c6afc7e777a9",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "true4": [
+                                                {
+                                                    "id": "8129b401-610f-47d0-9ee7-81540150f52e",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "true5": [
+                                                {
+                                                    "id": "2ef9b8c2-393f-43e3-b6d2-a16b207638f5",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "true6": [
+                                                {
+                                                    "id": "644c2910-514a-45e3-864c-18456e789751",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "true7": [
+                                                {
+                                                    "id": "13122fb3-64f1-46d4-9f93-4fdb7db34456",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "true8": [
+                                                {
+                                                    "id": "80f03877-219c-499c-aaca-df99a582a8c4",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "true9": [
+                                                {
+                                                    "id": "c6e83430-8223-45d9-8cad-8eed740e8cb0",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "true10": [
+                                                {
+                                                    "id": "e5c43850-a977-4d52-9b96-c21a79e23d8f",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "true11": [
+                                                {
+                                                    "id": "cd284162-ec5a-44ac-bf10-28176000e418",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "true12": [
+                                                {
+                                                    "id": "ea059763-e631-4a52-a506-cff8a7e37502",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "true13": [
+                                                {
+                                                    "id": "0aa5a01c-51ee-4319-9550-dd8cba83bd7c",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "true14": [
+                                                {
+                                                    "id": "3c5051db-335f-41f4-b076-ec2e06f92460",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "true15": [
+                                                {
+                                                    "id": "47b20556-11ce-4ea7-a2dd-17e3739e9608",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "false": [
+                                                {
+                                                    "id": "6d8f21f6-b6fa-4fc3-bde9-4a67cb3c4ff8",
+                                                    "command": "EVENT_COMMENT",
+                                                    "args": {
+                                                        "text": "Run",
+                                                        "__collapse": true
+                                                    }
+                                                },
+                                                {
+                                                    "id": "9d91e8e1-8d13-4955-af57-fc28f49c13ec",
+                                                    "command": "EVENT_GOTO_LABEL",
+                                                    "args": {
+                                                        "__label": "Goto FIGHT END",
+                                                        "label": "FIGHT END",
+                                                        "__collapse": true
+                                                    }
+                                                },
+                                                {
+                                                    "id": "6b5eab3e-f198-455b-83ca-919ee49473e1",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "id": "c296e0e5-a9f8-4810-a3f4-287f542c289b",
+                                        "command": "EVENT_END"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ac2c2774-4a7d-42c2-b844-dc81cb21f9c0",
+                            "command": "EVENT_DEFINE_LABEL",
+                            "args": {
+                                "label": "FIGHT END",
+                                "__label": "FIGHT END",
+                                "__collapse": true
+                            }
+                        },
+                        {
+                            "id": "f1eb1a30-b619-48a9-9e33-c70b647bc887",
+                            "command": "EVENT_END"
+                        }
+                    ],
+                    "startScript": [
+                        {
+                            "id": "ffdb687f-ce8e-43e9-8d05-adb8d06c397a",
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "51",
+                                "__collapseElse": false
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "id": "e83be581-5cf5-4d6e-85e7-82e9a97d2fe0",
+                                        "command": "EVENT_ACTOR_HIDE",
+                                        "args": {
+                                            "actorId": "c6726a9e-661a-4b72-8165-e43c15303988"
+                                        }
+                                    },
+                                    {
+                                        "id": "f75690c9-217d-48e8-b033-c734d3f43d2d",
+                                        "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+                                        "args": {
+                                            "actorId": "player"
+                                        }
+                                    },
+                                    {
+                                        "id": "bb6ad45a-40b2-4c80-a1a9-2082b3ebf5f7",
+                                        "command": "EVENT_END"
+                                    }
+                                ],
+                                "false": [
+                                    {
+                                        "id": "2a9fc888-beca-4585-bd34-e3a374defd4f",
+                                        "command": "EVENT_SET_VALUE",
+                                        "args": {
+                                            "variable": "L0",
+                                            "value": 10
+                                        }
+                                    },
+                                    {
+                                        "id": "3140c42d-d1d9-4492-b3a8-93e1fae46252",
+                                        "command": "EVENT_SET_VALUE",
+                                        "args": {
+                                            "variable": "L1",
+                                            "value": 10
+                                        }
+                                    },
+                                    {
+                                        "id": "a06ba5ab-8a33-4418-9c94-4ffcdd8f1dfe",
+                                        "command": "EVENT_SET_VALUE",
+                                        "args": {
+                                            "variable": "L2",
+                                            "value": 1
+                                        }
+                                    },
+                                    {
+                                        "id": "9d679ded-c994-4212-9ae1-1d7c86cf0d01",
+                                        "command": "EVENT_SET_VALUE",
+                                        "args": {
+                                            "variable": "L3",
+                                            "value": "0"
+                                        }
+                                    },
+                                    {
+                                        "id": "f3348b6d-0129-4feb-8dcb-33a369aa7d1c",
+                                        "command": "EVENT_END"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "b246b62c-04c7-4b04-bc07-f79eb309aff9",
+                            "command": "EVENT_END"
+                        }
+                    ],
+                    "name": "Karen"
+                }
+            ],
+            "triggers": [
+                {
+                    "trigger": "walk",
+                    "id": "386387a4-cd6c-4056-93a1-664c0f481380",
+                    "x": 0,
+                    "y": 6,
+                    "width": 1,
+                    "height": 4,
+                    "script": [
+                        {
+                            "id": "108cc9d4-1602-4a1c-b197-b0013f1e691f",
+                            "command": "EVENT_SWITCH_SCENE",
+                            "args": {
+                                "sceneId": "5aaa18c9-f47e-4ff1-b5c3-5286c763cb1a",
+                                "x": 17,
+                                "y": 8,
+                                "direction": "left",
+                                "fadeSpeed": "2"
+                            }
+                        },
+                        {
+                            "id": "bde6c6e5-8b1e-4814-99f7-9008218afe93",
+                            "command": "EVENT_END"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Initialize",
+            "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
+            "width": 20,
+            "height": 18,
+            "collisions": [],
+            "id": "ccf151a3-0191-4072-b2aa-0394cf6cb6d6",
+            "x": 416,
+            "y": 43,
+            "actors": [],
             "triggers": [],
             "script": [
                 {
-                    "id": "bee7f39a-e509-41a2-888e-fc698bc97762",
-                    "command": "EVENT_SET_VALUE",
+                    "id": "648facca-96c0-42c6-9093-abf1ece41251",
+                    "command": "EVENT_GROUP",
                     "args": {
-                        "variable": "0",
-                        "value": 10
+                        "__collapse": false,
+                        "__label": "Initialize Player Variables"
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "id": "bc727fe1-9a1c-4755-b49e-391f9e3555d4",
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "0",
+                                    "value": 10
+                                }
+                            },
+                            {
+                                "id": "3e490c39-2770-499b-b6c4-0ce8df8c7421",
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "1",
+                                    "value": 10
+                                }
+                            },
+                            {
+                                "id": "fa624800-c3c4-40bc-b2d1-0574a4602ba3",
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "2",
+                                    "value": 6
+                                }
+                            },
+                            {
+                                "id": "47bc74aa-f40c-493a-9d28-41ff56114a66",
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "3",
+                                    "value": 1
+                                }
+                            },
+                            {
+                                "id": "a5bbc26e-bc0f-4ad3-9b76-1a6871ac75ea",
+                                "command": "EVENT_END"
+                            }
+                        ]
                     }
                 },
                 {
-                    "id": "1d978631-ac4c-4e6e-8890-a6a182c83549",
-                    "command": "EVENT_SET_VALUE",
+                    "id": "7b2c25d6-2e2e-4bcf-a7cf-731d4f0c4393",
+                    "command": "EVENT_GROUP",
                     "args": {
-                        "variable": "1",
-                        "value": 10
+                        "__collapse": false,
+                        "__label": "Initialize Move List"
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "id": "a5850e15-2d15-44fe-99e9-5095c33cd199",
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "101",
+                                    "value": 3
+                                }
+                            },
+                            {
+                                "id": "c5e31015-e2d6-4f2b-80a6-c19250e436e3",
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "102",
+                                    "value": 2
+                                }
+                            },
+                            {
+                                "id": "9a7d401a-c4bb-447e-bee4-7c85094b092a",
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "103",
+                                    "value": 1
+                                }
+                            },
+                            {
+                                "id": "4b00e79f-74eb-4b49-9c8d-5ab3366a46d6",
+                                "command": "EVENT_END"
+                            }
+                        ]
                     }
                 },
                 {
-                    "id": "d5c2210f-73c3-4839-b004-abe0ebe7d2f8",
-                    "command": "EVENT_SET_VALUE",
-                    "args": {
-                        "variable": "2",
-                        "value": 6
-                    }
-                },
-                {
-                    "id": "40761a6b-29d9-442d-85ad-db122a2230e1",
-                    "command": "EVENT_SET_VALUE",
-                    "args": {
-                        "variable": "3",
-                        "value": 1
-                    }
-                },
-                {
-                    "id": "bc0445d5-1e75-45ab-b7c3-a67a3bb5f3c6",
+                    "id": "e8e0a828-387e-4cf0-9742-88b22e0abfbf",
                     "command": "EVENT_TEXT",
                     "args": {
                         "text": [
@@ -825,7 +2009,7 @@
                     }
                 },
                 {
-                    "id": "69136cdc-425a-4729-b7cf-7c9175966daa",
+                    "id": "0b5f9b10-9b46-48f3-a137-9579fe62a715",
                     "command": "EVENT_TEXT",
                     "args": {
                         "text": [
@@ -836,7 +2020,18 @@
                     "__type": "event"
                 },
                 {
-                    "id": "38ec8587-b9f1-4623-bf5d-df4426a8051f",
+                    "id": "06dbe0a3-c257-4b8f-94b7-8c89d2f07213",
+                    "command": "EVENT_SWITCH_SCENE",
+                    "args": {
+                        "sceneId": "5aaa18c9-f47e-4ff1-b5c3-5286c763cb1a",
+                        "x": 2,
+                        "y": 11,
+                        "direction": "down",
+                        "fadeSpeed": "2"
+                    }
+                },
+                {
+                    "id": "32b8facc-6ae3-481f-96b3-35878127c6f3",
                     "command": "EVENT_END"
                 }
             ]
@@ -881,6 +2076,38 @@
         {
             "id": "4",
             "name": "Enemy Strength - Player Block"
+        },
+        {
+            "id": "101",
+            "name": "Punch"
+        },
+        {
+            "id": "102",
+            "name": "Kick"
+        },
+        {
+            "id": "103",
+            "name": "Headbutt"
+        },
+        {
+            "id": "c6726a9e-661a-4b72-8165-e43c15303988__L0",
+            "name": "Max HP"
+        },
+        {
+            "id": "c6726a9e-661a-4b72-8165-e43c15303988__L1",
+            "name": "Hit Points"
+        },
+        {
+            "id": "c6726a9e-661a-4b72-8165-e43c15303988__L2",
+            "name": "Strength"
+        },
+        {
+            "id": "51",
+            "name": "Karen Dead?"
+        },
+        {
+            "id": "c6726a9e-661a-4b72-8165-e43c15303988__L3",
+            "name": "Turn Number"
         }
     ],
     "backgrounds": [
@@ -892,7 +2119,7 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "placeholder.png",
-            "_v": 1578665832596
+            "_v": 1579358830968
         }
     ],
     "spriteSheets": [
@@ -902,7 +2129,7 @@
             "numFrames": 3,
             "type": "actor",
             "filename": "actor.png",
-            "_v": 1578665832613
+            "_v": 1579358830968
         },
         {
             "id": "581d34d0-9591-4e6e-a609-1d94f203b0cd",
@@ -910,7 +2137,7 @@
             "numFrames": 6,
             "type": "actor_animated",
             "filename": "actor_animated.png",
-            "_v": 1578665832603
+            "_v": 1579358830968
         },
         {
             "id": "d1fcfe8a-3008-477a-a313-0f30f969680a",
@@ -918,7 +2145,15 @@
             "numFrames": 6,
             "type": "actor_animated",
             "filename": "actor_animated2.png",
-            "_v": 1578665832595
+            "_v": 1579358830968
+        },
+        {
+            "id": "b3ca6b48-3054-41b9-8023-cc7aa532f51f",
+            "name": "stanley",
+            "numFrames": 6,
+            "type": "actor_animated",
+            "filename": "stanley.png",
+            "_v": 1579358830968
         },
         {
             "id": "daf95270-e30d-423b-9ee7-990ae29f57f6",
@@ -926,7 +2161,7 @@
             "numFrames": 1,
             "type": "static",
             "filename": "static.png",
-            "_v": 1578665832619
+            "_v": 1579358830968
         }
     ],
     "music": [
@@ -934,8 +2169,14 @@
             "id": "f50428ab-a084-4591-9bba-2ba10fe7b1c6",
             "name": "template",
             "filename": "template.mod",
-            "_v": 1578665832575
+            "_v": 1579358830947
         }
     ],
-    "customEvents": []
+    "customEvents": [
+        {
+            "id": "504a3315-7558-4ccc-95da-8b0c6c7dbb7e",
+            "variables": {},
+            "actors": {}
+        }
+    ]
 }
