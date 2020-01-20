@@ -76,7 +76,7 @@
             "y": 270.25,
             "actors": [
                 {
-                    "spriteSheetId": "daf95270-e30d-423b-9ee7-990ae29f57f6",
+                    "spriteSheetId": "9efdd8ad-c1e3-438c-a694-30df7fa73d09",
                     "movementType": "static",
                     "direction": "down",
                     "moveSpeed": "1",
@@ -87,13 +87,22 @@
                     "name": "Enemy",
                     "script": [
                         {
+                            "id": "026f6555-c7ee-4326-8837-3cf7f8141648",
+                            "command": "EVENT_ACTOR_EMOTE",
+                            "args": {
+                                "actorId": "$self$",
+                                "emoteId": "4",
+                                "__collapse": true
+                            }
+                        },
+                        {
                             "id": "fc4ef027-8d2a-4546-9f0a-8c5b115d3d75",
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "Gonna tussle with\nEnemy\n"
+                                    "Gonna tussle\nwith Astro."
                                 ],
-                                "avatarId": "",
+                                "avatarId": "898140df-8632-456f-ba97-74dbd14323f3",
                                 "__collapse": true
                             }
                         },
@@ -101,7 +110,7 @@
                             "id": "0222981b-1f75-4c96-af20-bb333c01fd45",
                             "command": "EVENT_LOOP",
                             "args": {
-                                "__collapse": false,
+                                "__collapse": true,
                                 "__label": "Fight Loop"
                             },
                             "children": {
@@ -919,7 +928,7 @@
             "y": 271,
             "actors": [
                 {
-                    "spriteSheetId": "11b5452b-187c-43a3-afb1-a1f4f74ffda2",
+                    "spriteSheetId": "9efdd8ad-c1e3-438c-a694-30df7fa73d09",
                     "movementType": "static",
                     "direction": "down",
                     "moveSpeed": "1",
@@ -927,7 +936,7 @@
                     "id": "c6726a9e-661a-4b72-8165-e43c15303988",
                     "x": 13,
                     "y": 8,
-                    "frame": 1,
+                    "frame": 0,
                     "script": [
                         {
                             "id": "0692a433-e6ee-4c0a-b686-e77dbdfc3d5e",
@@ -2119,7 +2128,7 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "placeholder.png",
-            "_v": 1579358830968
+            "_v": 1579465939744
         }
     ],
     "spriteSheets": [
@@ -2129,7 +2138,7 @@
             "numFrames": 3,
             "type": "actor",
             "filename": "actor.png",
-            "_v": 1579358830968
+            "_v": 1579465939745
         },
         {
             "id": "581d34d0-9591-4e6e-a609-1d94f203b0cd",
@@ -2137,7 +2146,7 @@
             "numFrames": 6,
             "type": "actor_animated",
             "filename": "actor_animated.png",
-            "_v": 1579358830968
+            "_v": 1579465939745
         },
         {
             "id": "d1fcfe8a-3008-477a-a313-0f30f969680a",
@@ -2145,7 +2154,23 @@
             "numFrames": 6,
             "type": "actor_animated",
             "filename": "actor_animated2.png",
-            "_v": 1579358830968
+            "_v": 1579465939746
+        },
+        {
+            "id": "898140df-8632-456f-ba97-74dbd14323f3",
+            "name": "alien_head",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "alien_head.png",
+            "_v": 1579465939746
+        },
+        {
+            "id": "9efdd8ad-c1e3-438c-a694-30df7fa73d09",
+            "name": "astro",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "astro.png",
+            "_v": 1579465939746
         },
         {
             "id": "b3ca6b48-3054-41b9-8023-cc7aa532f51f",
@@ -2153,7 +2178,7 @@
             "numFrames": 6,
             "type": "actor_animated",
             "filename": "stanley.png",
-            "_v": 1579358830968
+            "_v": 1579465939746
         },
         {
             "id": "daf95270-e30d-423b-9ee7-990ae29f57f6",
@@ -2161,7 +2186,39 @@
             "numFrames": 1,
             "type": "static",
             "filename": "static.png",
-            "_v": 1579358830968
+            "_v": 1579465939746
+        },
+        {
+            "id": "a052c303-0af2-46bb-b38a-71b70ac7be0d",
+            "name": "Templates\\alien_head",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "Templates\\alien_head.png",
+            "_v": 1579465939746
+        },
+        {
+            "id": "e5e970e0-7d51-4d5a-8215-8d7baeac63ed",
+            "name": "Templates\\astro",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "Templates\\astro.png",
+            "_v": 1579465939746
+        },
+        {
+            "id": "7dc5d5f1-ef41-41c0-b942-32d3c70ec401",
+            "name": "Templates\\man",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "Templates\\man.png",
+            "_v": 1579465939746
+        },
+        {
+            "id": "c4334771-7779-457f-b5b0-afc060811a29",
+            "name": "Templates\\pit",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "Templates\\pit.png",
+            "_v": 1579465939746
         }
     ],
     "music": [
@@ -2169,7 +2226,7 @@
             "id": "f50428ab-a084-4591-9bba-2ba10fe7b1c6",
             "name": "template",
             "filename": "template.mod",
-            "_v": 1579358830947
+            "_v": 1579465939738
         }
     ],
     "customEvents": [
