@@ -2,8 +2,8 @@
     "settings": {
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1426,
-        "worldScrollY": 862,
+        "worldScrollX": 1623,
+        "worldScrollY": 1053,
         "zoom": 400,
         "customColorsWhite": "E8F8E0",
         "customColorsLight": "B0F088",
@@ -43,13 +43,13 @@
                 8,
                 0,
                 130,
-                232,
-                33,
+                240,
+                34,
                 8,
                 14,
                 130,
                 232,
-                33,
+                34,
                 8,
                 0,
                 130,
@@ -72,8 +72,8 @@
                 0
             ],
             "id": "5aaa18c9-f47e-4ff1-b5c3-5286c763cb1a",
-            "x": 420.5,
-            "y": 270.25,
+            "x": 420,
+            "y": 270.75,
             "actors": [
                 {
                     "spriteSheetId": "9efdd8ad-c1e3-438c-a694-30df7fa73d09",
@@ -2323,7 +2323,7 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "9-5 house interior.png",
-            "_v": 1579933516764
+            "_v": 1579970190426
         },
         {
             "id": "d1d3376d-ef78-4044-86a6-f1985b35ba20",
@@ -2333,7 +2333,7 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "9-5 house interior2.png",
-            "_v": 1579933516763
+            "_v": 1579970510910
         },
         {
             "id": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
@@ -2343,7 +2343,7 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "placeholder.png",
-            "_v": 1579933516765
+            "_v": 1579970190428
         }
     ],
     "spriteSheets": [
@@ -2353,55 +2353,7 @@
             "numFrames": 6,
             "type": "actor_animated",
             "filename": "9-5 sprite movement 1.png",
-            "_v": 1579933516765
-        },
-        {
-            "id": "0d7af064-d9fc-4f0d-b1a3-88e1e6f92fdf",
-            "name": "Anim_Test",
-            "numFrames": 6,
-            "type": "actor_animated",
-            "filename": "Anim_Test.png",
-            "_v": 1579933516765
-        },
-        {
-            "id": "d963a7d0-5384-47c2-b19d-cb9420c9d15a",
-            "name": "Templates\\9-5 house interior2",
-            "numFrames": 10,
-            "type": "animated",
-            "filename": "Templates\\9-5 house interior2.png",
-            "_v": 1579933516765
-        },
-        {
-            "id": "a052c303-0af2-46bb-b38a-71b70ac7be0d",
-            "name": "Templates\\alien_head",
-            "numFrames": 1,
-            "type": "static",
-            "filename": "Templates\\alien_head.png",
-            "_v": 1579933516765
-        },
-        {
-            "id": "e5e970e0-7d51-4d5a-8215-8d7baeac63ed",
-            "name": "Templates\\astro",
-            "numFrames": 1,
-            "type": "static",
-            "filename": "Templates\\astro.png",
-            "_v": 1579933516765
-        },
-        {
-            "id": "7dc5d5f1-ef41-41c0-b942-32d3c70ec401",
-            "name": "Templates\\man",
-            "numFrames": 1,
-            "type": "static",
-            "filename": "Templates\\man.png",
-            "_v": 1579933516765
-        },
-        {
-            "id": "c4334771-7779-457f-b5b0-afc060811a29",
-            "name": "Templates\\pit",
-            "numFrames": 1,
-            "type": "static",
-            "filename": "Templates\\pit.png",
-            "_v": 1579933516765
+            "_v": 1579970190427
         },
         {
             "id": "11b5452b-187c-43a3-afb1-a1f4f74ffda2",
@@ -2409,7 +2361,7 @@
             "numFrames": 3,
             "type": "actor",
             "filename": "actor.png",
-            "_v": 1579933516765
+            "_v": 1579970190435
         },
         {
             "id": "581d34d0-9591-4e6e-a609-1d94f203b0cd",
@@ -2417,7 +2369,7 @@
             "numFrames": 6,
             "type": "actor_animated",
             "filename": "actor_animated.png",
-            "_v": 1579933516765
+            "_v": 1579970190429
         },
         {
             "id": "d1fcfe8a-3008-477a-a313-0f30f969680a",
@@ -2425,7 +2377,7 @@
             "numFrames": 6,
             "type": "actor_animated",
             "filename": "actor_animated2.png",
-            "_v": 1579933516765
+            "_v": 1579970190427
         },
         {
             "id": "898140df-8632-456f-ba97-74dbd14323f3",
@@ -2433,7 +2385,15 @@
             "numFrames": 1,
             "type": "static",
             "filename": "alien_head.png",
-            "_v": 1579933516765
+            "_v": 1579970190427
+        },
+        {
+            "id": "0d7af064-d9fc-4f0d-b1a3-88e1e6f92fdf",
+            "name": "Anim_Test",
+            "numFrames": 6,
+            "type": "actor_animated",
+            "filename": "Anim_Test.png",
+            "_v": 1579970190427
         },
         {
             "id": "9efdd8ad-c1e3-438c-a694-30df7fa73d09",
@@ -2441,7 +2401,7 @@
             "numFrames": 1,
             "type": "static",
             "filename": "astro.png",
-            "_v": 1579933975256
+            "_v": 1579970190427
         },
         {
             "id": "a398812c-af88-4017-ab47-ee18a104290d",
@@ -2449,7 +2409,7 @@
             "numFrames": 1,
             "type": "static",
             "filename": "beer.png",
-            "_v": 1579933516765
+            "_v": 1579970190427
         },
         {
             "id": "260534c1-ac66-4679-8bd1-bd3fb999b18b",
@@ -2457,7 +2417,7 @@
             "numFrames": 1,
             "type": "static",
             "filename": "blank.png",
-            "_v": 1579934483378
+            "_v": 1579970190427
         },
         {
             "id": "b3ca6b48-3054-41b9-8023-cc7aa532f51f",
@@ -2465,7 +2425,7 @@
             "numFrames": 6,
             "type": "actor_animated",
             "filename": "stanley.png",
-            "_v": 1579933516765
+            "_v": 1579970190428
         },
         {
             "id": "daf95270-e30d-423b-9ee7-990ae29f57f6",
@@ -2473,7 +2433,47 @@
             "numFrames": 1,
             "type": "static",
             "filename": "static.png",
-            "_v": 1579933516765
+            "_v": 1579970190428
+        },
+        {
+            "id": "d963a7d0-5384-47c2-b19d-cb9420c9d15a",
+            "name": "Templates\\9-5 house interior2",
+            "numFrames": 10,
+            "type": "animated",
+            "filename": "Templates\\9-5 house interior2.png",
+            "_v": 1579970190446
+        },
+        {
+            "id": "a052c303-0af2-46bb-b38a-71b70ac7be0d",
+            "name": "Templates\\alien_head",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "Templates\\alien_head.png",
+            "_v": 1579970190428
+        },
+        {
+            "id": "e5e970e0-7d51-4d5a-8215-8d7baeac63ed",
+            "name": "Templates\\astro",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "Templates\\astro.png",
+            "_v": 1579970190428
+        },
+        {
+            "id": "7dc5d5f1-ef41-41c0-b942-32d3c70ec401",
+            "name": "Templates\\man",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "Templates\\man.png",
+            "_v": 1579970190428
+        },
+        {
+            "id": "c4334771-7779-457f-b5b0-afc060811a29",
+            "name": "Templates\\pit",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "Templates\\pit.png",
+            "_v": 1579970190428
         }
     ],
     "music": [
@@ -2481,7 +2481,7 @@
             "id": "f50428ab-a084-4591-9bba-2ba10fe7b1c6",
             "name": "template",
             "filename": "template.mod",
-            "_v": 1579933516748
+            "_v": 1579970190393
         }
     ],
     "customEvents": [
