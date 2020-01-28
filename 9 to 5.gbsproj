@@ -2,9 +2,9 @@
     "settings": {
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 251,
+        "worldScrollX": 0,
         "worldScrollY": 0,
-        "zoom": 400,
+        "zoom": 100,
         "customColorsWhite": "E8F8E0",
         "customColorsLight": "B0F088",
         "customColorsDark": "509878",
@@ -1228,7 +1228,8 @@
                             "args": {
                                 "variable": "L0",
                                 "__collapseElse": false,
-                                "__disableElse": false
+                                "__disableElse": false,
+                                "__collapse": false
                             },
                             "children": {
                                 "true": [
@@ -1238,6 +1239,29 @@
                                         "args": {
                                             "actorId": "73b00726-42ef-4fbc-a92d-da4ecb763194",
                                             "frame": 1
+                                        }
+                                    },
+                                    {
+                                        "id": "756d833c-c1c5-43bc-a594-08e13797f779",
+                                        "command": "EVENT_WAIT",
+                                        "args": {
+                                            "time": 0.5
+                                        }
+                                    },
+                                    {
+                                        "id": "fb37939f-ddbf-4368-add2-62789bf772ff",
+                                        "command": "EVENT_SCENE_PUSH_STATE",
+                                        "args": {}
+                                    },
+                                    {
+                                        "id": "64272418-e04d-4b91-be9e-c340416c00bc",
+                                        "command": "EVENT_SWITCH_SCENE",
+                                        "args": {
+                                            "sceneId": "8fa9142d-6bb0-4cce-9602-bcb8eaa1c3e5",
+                                            "x": 0,
+                                            "y": 0,
+                                            "direction": "",
+                                            "fadeSpeed": "2"
                                         }
                                     },
                                     {
@@ -1550,6 +1574,91 @@
                     ]
                 }
             ]
+        },
+        {
+            "name": "TV",
+            "backgroundId": "d46225ca-ea3e-48a2-886f-a85d2cd216a6",
+            "width": 20,
+            "height": 18,
+            "collisions": [
+                255,
+                255,
+                31,
+                0,
+                128,
+                1,
+                0,
+                24,
+                0,
+                128,
+                1,
+                0,
+                24,
+                0,
+                128,
+                1,
+                0,
+                24,
+                0,
+                128,
+                1,
+                0,
+                24,
+                0,
+                128,
+                1,
+                0,
+                24,
+                0,
+                128,
+                1,
+                0,
+                24,
+                0,
+                128,
+                1,
+                0,
+                24,
+                0,
+                128,
+                1,
+                0,
+                248,
+                255,
+                255
+            ],
+            "id": "8fa9142d-6bb0-4cce-9602-bcb8eaa1c3e5",
+            "x": 652,
+            "y": 30,
+            "actors": [],
+            "triggers": [],
+            "script": [
+                {
+                    "id": "7e69fdd0-1759-43cc-b158-09e45c22577c",
+                    "command": "EVENT_ACTOR_HIDE",
+                    "args": {
+                        "actorId": "player"
+                    }
+                },
+                {
+                    "id": "b7ba3160-2b82-4e72-8b4c-b7ffdd8923af",
+                    "command": "EVENT_WAIT",
+                    "args": {
+                        "time": 1
+                    }
+                },
+                {
+                    "id": "a4929fa9-8928-4af5-8ade-5da5f7f4af75",
+                    "command": "EVENT_SCENE_POP_STATE",
+                    "args": {
+                        "fadeSpeed": "2"
+                    }
+                },
+                {
+                    "id": "a9cd3de5-8fcf-4d94-aab4-c9525c5571e9",
+                    "command": "EVENT_END"
+                }
+            ]
         }
     ],
     "_version": "1.2.0",
@@ -1635,6 +1744,16 @@
     ],
     "backgrounds": [
         {
+            "id": "d46225ca-ea3e-48a2-886f-a85d2cd216a6",
+            "name": "TV Program",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "TV Program.png",
+            "_v": 1580226713488
+        },
+        {
             "id": "be9cd467-31a3-4fcc-a2bf-5e1247c2ccad",
             "name": "Title Screen",
             "width": 20,
@@ -1642,7 +1761,7 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "Title Screen.png",
-            "_v": 1580138805816
+            "_v": 1580226454431
         },
         {
             "id": "2ef928cc-0530-45a5-a364-18b547c8edaf",
@@ -1652,7 +1771,7 @@
             "imageWidth": 256,
             "imageHeight": 256,
             "filename": "outside.png",
-            "_v": 1580139507906
+            "_v": 1580226454431
         },
         {
             "id": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
@@ -1662,7 +1781,7 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "placeholder.png",
-            "_v": 1580138805815
+            "_v": 1580226454431
         },
         {
             "id": "07d105cd-9ab3-43ab-af62-718098547ee6",
@@ -1672,7 +1791,7 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "pokemon house interior lower floor.png",
-            "_v": 1580141298894
+            "_v": 1580226454431
         },
         {
             "id": "cfaddd83-ab40-4592-95f3-07b61014a480",
@@ -1682,7 +1801,7 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "pokemon house interior upper floor.png",
-            "_v": 1580138805816
+            "_v": 1580226454431
         }
     ],
     "spriteSheets": [
@@ -1692,7 +1811,7 @@
             "numFrames": 6,
             "type": "actor_animated",
             "filename": "9-5 sprite movement 1.png",
-            "_v": 1580143795890
+            "_v": 1580228681038
         },
         {
             "id": "898140df-8632-456f-ba97-74dbd14323f3",
@@ -1700,7 +1819,7 @@
             "numFrames": 1,
             "type": "static",
             "filename": "alien_head.png",
-            "_v": 1580138805816
+            "_v": 1580226454432
         },
         {
             "id": "9efdd8ad-c1e3-438c-a694-30df7fa73d09",
@@ -1708,7 +1827,7 @@
             "numFrames": 1,
             "type": "static",
             "filename": "astro.png",
-            "_v": 1580138805816
+            "_v": 1580226454431
         },
         {
             "id": "260534c1-ac66-4679-8bd1-bd3fb999b18b",
@@ -1716,7 +1835,7 @@
             "numFrames": 1,
             "type": "static",
             "filename": "blank.png",
-            "_v": 1580138805816
+            "_v": 1580226454432
         },
         {
             "id": "8c005c60-895f-4265-8cad-7bcdc1406e1d",
@@ -1724,7 +1843,7 @@
             "numFrames": 3,
             "type": "actor",
             "filename": "TV.png",
-            "_v": 1580138805816
+            "_v": 1580226454432
         }
     ],
     "music": [
@@ -1732,7 +1851,7 @@
             "id": "f50428ab-a084-4591-9bba-2ba10fe7b1c6",
             "name": "template",
             "filename": "template.mod",
-            "_v": 1580138805813
+            "_v": 1580226454425
         }
     ],
     "customEvents": []
