@@ -3,7 +3,7 @@
         "showCollisions": true,
         "showConnections": true,
         "worldScrollX": 892,
-        "worldScrollY": 200,
+        "worldScrollY": 0,
         "zoom": 200,
         "customColorsWhite": "E8F8E0",
         "customColorsLight": "B0F088",
@@ -1596,6 +1596,16 @@
                             }
                         },
                         {
+                            "id": "2b1c32cb-5c65-4f3c-84d3-77e4ae02fdae",
+                            "command": "EVENT_SET_VALUE",
+                            "args": {
+                                "variable": "20",
+                                "value": 1,
+                                "__label": "Turn = 1",
+                                "__collapse": true
+                            }
+                        },
+                        {
                             "id": "2f3576f5-e051-4136-8e95-d8e26305dc17",
                             "command": "EVENT_LOOP",
                             "args": {},
@@ -2890,10 +2900,56 @@
                                         }
                                     },
                                     {
+                                        "id": "1cd8854d-0d57-403e-ade3-92ffff689ba4",
+                                        "command": "EVENT_CHOICE",
+                                        "args": {
+                                            "variable": "30",
+                                            "trueText": "Keep Fighting",
+                                            "falseText": "Run",
+                                            "__label": "Keep Fighting?"
+                                        }
+                                    },
+                                    {
+                                        "id": "d840740f-cfb7-4a52-b037-c9f390fa372c",
+                                        "command": "EVENT_IF_FALSE",
+                                        "args": {
+                                            "variable": "30",
+                                            "__collapseElse": false,
+                                            "__disableElse": true,
+                                            "__label": "Gonna run?",
+                                            "__collapse": true
+                                        },
+                                        "children": {
+                                            "true": [
+                                                {
+                                                    "id": "92cb5372-f6ee-4f66-8bdb-a6f6011ed5e2",
+                                                    "command": "EVENT_GOTO_LABEL",
+                                                    "args": {
+                                                        "label": "END_LOOP",
+                                                        "__collapse": true,
+                                                        "__label": "Goto: END_LOOP"
+                                                    }
+                                                },
+                                                {
+                                                    "id": "34a194a6-9e94-4bc7-92c2-75ebf20dfeeb",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "false": [
+                                                {
+                                                    "id": "f4994890-20a3-42f0-9f8a-dc874354eda5",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
                                         "id": "9d2105d8-598b-4a12-a977-16679f593696",
                                         "command": "EVENT_INC_VALUE",
                                         "args": {
-                                            "variable": "20"
+                                            "variable": "20",
+                                            "__collapse": true,
+                                            "__label": "Turn ++"
                                         }
                                     },
                                     {
@@ -2901,6 +2957,15 @@
                                         "command": "EVENT_END"
                                     }
                                 ]
+                            }
+                        },
+                        {
+                            "id": "ae3a224f-a14c-409d-8d65-f687f5ecae5c",
+                            "command": "EVENT_DEFINE_LABEL",
+                            "args": {
+                                "label": "END_LOOP",
+                                "__collapse": true,
+                                "__label": "END_LOOP"
                             }
                         },
                         {
@@ -3423,7 +3488,7 @@
         },
         {
             "name": "Selection Screen",
-            "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
+            "backgroundId": "39e65377-4334-429d-b720-ee71ef164eb6",
             "width": 20,
             "height": 18,
             "collisions": [
@@ -4145,7 +4210,7 @@
                                                     "args": {
                                                         "actorId": "$self$",
                                                         "x": 5,
-                                                        "y": 2,
+                                                        "y": 3,
                                                         "__collapse": false
                                                     }
                                                 },
@@ -4173,7 +4238,7 @@
                                                                 "args": {
                                                                     "actorId": "$self$",
                                                                     "x": 5,
-                                                                    "y": 5,
+                                                                    "y": 6,
                                                                     "__collapse": false
                                                                 }
                                                             },
@@ -4202,7 +4267,7 @@
                                                                             "args": {
                                                                                 "actorId": "$self$",
                                                                                 "x": 5,
-                                                                                "y": 8,
+                                                                                "y": 9,
                                                                                 "__collapse": false
                                                                             }
                                                                         },
@@ -4230,7 +4295,7 @@
                                                                                         "args": {
                                                                                             "actorId": "$self$",
                                                                                             "x": 5,
-                                                                                            "y": 5,
+                                                                                            "y": 12,
                                                                                             "__collapse": false
                                                                                         }
                                                                                     },
@@ -4258,7 +4323,7 @@
                                                                                                     "args": {
                                                                                                         "actorId": "$self$",
                                                                                                         "x": 5,
-                                                                                                        "y": 14,
+                                                                                                        "y": 15,
                                                                                                         "__collapse": false
                                                                                                     }
                                                                                                 },
@@ -4364,8 +4429,8 @@
                                                     "command": "EVENT_ACTOR_SET_POSITION",
                                                     "args": {
                                                         "actorId": "$self$",
-                                                        "x": 11,
-                                                        "y": 2,
+                                                        "x": 13,
+                                                        "y": 3,
                                                         "__collapse": false
                                                     }
                                                 },
@@ -4392,8 +4457,8 @@
                                                                 "command": "EVENT_ACTOR_SET_POSITION",
                                                                 "args": {
                                                                     "actorId": "$self$",
-                                                                    "x": 11,
-                                                                    "y": 5,
+                                                                    "x": 13,
+                                                                    "y": 6,
                                                                     "__collapse": false
                                                                 }
                                                             },
@@ -4421,8 +4486,8 @@
                                                                             "command": "EVENT_ACTOR_SET_POSITION",
                                                                             "args": {
                                                                                 "actorId": "$self$",
-                                                                                "x": 11,
-                                                                                "y": 8,
+                                                                                "x": 13,
+                                                                                "y": 9,
                                                                                 "__collapse": false
                                                                             }
                                                                         },
@@ -4449,8 +4514,8 @@
                                                                                         "command": "EVENT_ACTOR_SET_POSITION",
                                                                                         "args": {
                                                                                             "actorId": "$self$",
-                                                                                            "x": 11,
-                                                                                            "y": 5,
+                                                                                            "x": 13,
+                                                                                            "y": 12,
                                                                                             "__collapse": false
                                                                                         }
                                                                                     },
@@ -4477,8 +4542,8 @@
                                                                                                     "command": "EVENT_ACTOR_SET_POSITION",
                                                                                                     "args": {
                                                                                                         "actorId": "$self$",
-                                                                                                        "x": 11,
-                                                                                                        "y": 14,
+                                                                                                        "x": 13,
+                                                                                                        "y": 15,
                                                                                                         "__collapse": false
                                                                                                     }
                                                                                                 },
@@ -4734,7 +4799,7 @@
                     "command": "EVENT_GROUP",
                     "args": {
                         "__label": "Set and Move to Starting Position",
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "children": {
                         "true": [
@@ -5035,6 +5100,16 @@
                                     "vectorY": "24",
                                     "__collapse": true,
                                     "__label": "Move Selector to Starting Position"
+                                }
+                            },
+                            {
+                                "id": "60603f5a-2e19-419b-8c62-8969f4de9407",
+                                "command": "EVENT_ACTOR_SET_DIRECTION",
+                                "args": {
+                                    "actorId": "player",
+                                    "direction": "left",
+                                    "__collapse": true,
+                                    "__label": "Set Direction to make sure Player can Select Moves."
                                 }
                             },
                             {
@@ -5470,9 +5545,43 @@
         {
             "id": "24",
             "name": "Temp Y"
+        },
+        {
+            "id": "30",
+            "name": "Fight?"
         }
     ],
     "backgrounds": [
+        {
+            "id": "39e65377-4334-429d-b720-ee71ef164eb6",
+            "name": "Selection Screen",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "Selection Screen.png",
+            "_v": 1580435121541
+        },
+        {
+            "id": "d46225ca-ea3e-48a2-886f-a85d2cd216a6",
+            "name": "TV Program",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "TV Program.png",
+            "_v": 1580424304991
+        },
+        {
+            "id": "be9cd467-31a3-4fcc-a2bf-5e1247c2ccad",
+            "name": "Title Screen",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "Title Screen.png",
+            "_v": 1580424304983
+        },
         {
             "id": "e78bd7c6-8422-4606-aafc-9b2dbd6e5fcc",
             "name": "boss",
@@ -5522,26 +5631,6 @@
             "imageHeight": 144,
             "filename": "pokemon house interior upper floor.png",
             "_v": 1580424304983
-        },
-        {
-            "id": "be9cd467-31a3-4fcc-a2bf-5e1247c2ccad",
-            "name": "Title Screen",
-            "width": 20,
-            "height": 18,
-            "imageWidth": 160,
-            "imageHeight": 144,
-            "filename": "Title Screen.png",
-            "_v": 1580424304983
-        },
-        {
-            "id": "d46225ca-ea3e-48a2-886f-a85d2cd216a6",
-            "name": "TV Program",
-            "width": 20,
-            "height": 18,
-            "imageWidth": 160,
-            "imageHeight": 144,
-            "filename": "TV Program.png",
-            "_v": 1580424304991
         }
     ],
     "spriteSheets": [
