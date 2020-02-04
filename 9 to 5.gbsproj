@@ -2,9 +2,9 @@
     "settings": {
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 892,
+        "worldScrollX": 0,
         "worldScrollY": 0,
-        "zoom": 200,
+        "zoom": 400,
         "customColorsWhite": "E8F8E0",
         "customColorsLight": "B0F088",
         "customColorsDark": "509878",
@@ -4895,6 +4895,27 @@
                             "command": "EVENT_END"
                         }
                     ]
+                },
+                {
+                    "spriteSheetId": "8b5fb3ea-a056-4998-82b9-4e4781f365ff",
+                    "movementType": "static",
+                    "direction": "down",
+                    "moveSpeed": "1",
+                    "animSpeed": "3",
+                    "id": "109fb58e-04a4-4213-85a3-083306424d30",
+                    "x": 7,
+                    "y": 3,
+                    "animate": true
+                },
+                {
+                    "spriteSheetId": "a367b684-f95c-4869-8096-db85c60a63a0",
+                    "movementType": "static",
+                    "direction": "down",
+                    "moveSpeed": "1",
+                    "animSpeed": "3",
+                    "id": "277b4b18-3d16-40b0-ae98-a35f190389c6",
+                    "x": 11,
+                    "y": 3
                 }
             ],
             "triggers": [],
@@ -5082,7 +5103,7 @@
                     "command": "EVENT_GROUP",
                     "args": {
                         "__label": "Set and Move to Starting Position",
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -5930,6 +5951,30 @@
             "_v": 1580750083964
         },
         {
+            "id": "a367b684-f95c-4869-8096-db85c60a63a0",
+            "name": "A Selector",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "A Selector.png",
+            "_v": 1580768407363
+        },
+        {
+            "id": "8b5fb3ea-a056-4998-82b9-4e4781f365ff",
+            "name": "B Selector",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "B Selector.png",
+            "_v": 1580768438969
+        },
+        {
+            "id": "8c005c60-895f-4265-8cad-7bcdc1406e1d",
+            "name": "TV",
+            "numFrames": 3,
+            "type": "actor",
+            "filename": "TV.png",
+            "_v": 1580750083948
+        },
+        {
             "id": "898140df-8632-456f-ba97-74dbd14323f3",
             "name": "alien_head",
             "numFrames": 1,
@@ -5991,14 +6036,6 @@
             "numFrames": 1,
             "type": "static",
             "filename": "selector.png",
-            "_v": 1580750083948
-        },
-        {
-            "id": "8c005c60-895f-4265-8cad-7bcdc1406e1d",
-            "name": "TV",
-            "numFrames": 3,
-            "type": "actor",
-            "filename": "TV.png",
             "_v": 1580750083948
         }
     ],
